@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starforged Grimoire of Love</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English:wght@400;700&family=Cardo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="custom-cursor"></div>
+
+    <!-- Arcane Background Music -->
+    <audio id="loveMusic" loop>
+      <source src="assets/bensound-love.mp3" type="audio/mp3" />
+      Your browser does not support the audio tag.
+    </audio>
+    <div class="music-control">
+      <button id="musicToggle" class="music-btn">Silence the Chant</button>
+    </div>
+    <div class="card-wrapper">
+      <div class="card" id="ecard">
+        <!-- FRONT -->
+        <div class="card-side card-front">
+          <div class="profile">
+            <img src="./assets/my_dream_girl.png" alt="Her Effigy" />
+            <h2>
+              <span class="sigil">💜</span> My Eternal Seer
+              <span class="sigil">💜</span>
+            </h2>
+          </div>
+          <div class="front-message" id="typingText"></div>
+          <button class="flip-btn" onclick="flipCard()">
+            Unveil the Grimoire’s Oath 🌌
+          </button>
+        </div>
+        <!-- BACK -->
+        <div class="card-side card-back">
+          <div class="content-scroll">
+            <p class="letter-opening">My Eternal Seer,</p>
+            <div class="back-header">Thou Art the Prophecy of My Soul</div>
+            <div class="subject">
+              <strong>Chemistry:</strong> You're my oxygen — without you, I
+              can't breathe.
+            </div>
+            <div class="subject">
+              <strong>Physics:</strong> You're my universe — the force that
+              keeps me grounded.
+            </div>
+            <div class="subject">
+              <strong>History:</strong> You're my queen — the legend I want to
+              live with forever.
+            </div>
+            <div class="subject">
+              <strong>Biology:</strong> You're my heart — the life in every
+              beat.
+            </div>
+            <div class="subject">
+              <strong>Geography:</strong> You're my world — the place I always
+              want to be.
+            </div>
+            <div class="subject">
+              <strong>Math:</strong> You're my solution — the answer to all of
+              life's equations.
+            </div>
+            <div class="subject">
+              <strong>Art:</strong> You color my world — every moment is a
+              masterpiece.
+            </div>
+            <div class="subject">
+              <strong>Music:</strong> You're my melody — the harmony in every
+              heartbeat.
+            </div>
+            <div class="subject">
+              <strong>Literature:</strong> You're the plot twist I never saw
+              coming, but always needed.
+            </div>
+            <div class="subject">
+              <strong>Philosophy:</strong> You’re my truth in a world full of
+              questions.
+            </div>
+            <div class="subject">
+              <strong>Economics:</strong> You’re the most valuable investment —
+              and my greatest return.
+            </div>
+            <div class="subject">
+              <strong>Psychology:</strong> You understand my soul, even in
+              silence.
+            </div>
+            <div class="subject">
+              <strong>Astronomy:</strong> You are the star my sky orbits around.
+            </div>
+            <div class="subject">
+              <strong>Drama:</strong> You’re the climax of my story.
+            </div>
+            <div class="subject">
+              <strong>Computer Science:</strong> You’re my favorite algorithm —
+              always solving me.
+            </div>
+            <div class="subject">
+              <strong>Physical Education:</strong> My heart races every time I
+              see you.
+            </div>
+            <div class="subject">
+              <strong>Language:</strong> You're the only word I want to say in
+              every tongue.
+            </div>
+            <div class="subject">
+              <strong>Civics:</strong> My heart follows you without laws.
+            </div>
+            <div class="subject">
+              <strong>Environmental Science:</strong> You’re the breath of fresh
+              air this world needs.
+            </div>
+            <p class="letter-closing">
+              Bound by the Stars,<br />Basharul - Alam - Mazu
+            </p>
+          </div>
+          <button class="flip-btn" onclick="flipCard()">
+            Return to Effigy
+          </button>
+        </div>
+      </div>
+    </div>
+    <canvas id="wispCanvas"></canvas>
+    <div id="quillCursor"></div>
+    <!-- Include External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
