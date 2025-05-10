@@ -471,9 +471,6 @@ body::after {
 
 /* Responsive Design */
 @media (max-width: 1000px) {
-}
-
-@media (max-width: 1000px) {
   .body {
     background: url("assets/background_mobile.png");
     background: url("./assets/background_pc.png") no-repeat center center;
@@ -494,13 +491,16 @@ body::after {
   }
 
   .profile::before {
-    top: 55px;
-    left: 120px;
+    top: 155px;
+    left: 326px;
+    width: 250px;
+    height: 250px;
+    border: 5px dashed #8a2be2;
   }
 
   .profile img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 50px;
     margin-left: 15px;
   }
@@ -557,11 +557,37 @@ button:hover ~ .custom-cursor,
   height: 35px;
 }
 
+@media (max-width: 660px) {
+  .profile::before {
+    top: 18px;
+    left: 77px;
+    width: 220px;
+    height: 220px;
+    border: 5px dashed #8a2be2;
+  }
+
+  .music-btn {
+    margin-top: -15px;
+  }
+}
+
 @media (max-width: 425px) {
   .profile img {
     width: 100px;
     height: 100px;
     margin-bottom: 50px;
     margin-left: 15px;
+  }
+
+  .profile::before {
+    top: 16px;
+    left: 95px;
+    width: 120px;
+    height: 120px;
+    border: 5px dashed #8a2be2;
+  }
+
+  .music-btn {
+    margin-top: -15px;
   }
 }
