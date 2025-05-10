@@ -1,3 +1,7 @@
+window.addEventListener("resize", () => {
+  console.log("Resized to:", window.innerWidth, "x", window.innerHeight);
+});
+
 // Typing Animation
 const textLines = [
   "You are the starlight in my darkness,",
@@ -107,70 +111,6 @@ function playVoiceMessage() {
     background: "#fff0f6",
   });
 }
-
-// Glowing Particles
-const particleCanvas = document.getElementById("particleCanvas");
-particleCanvas.width = window.innerWidth;
-particleCanvas.height = window.innerHeight;
-
-const particles = [];
-
-class Particle {
-  constructor() {
-    this.x = Math.random() * particleCanvas.width;
-    this.y = Math.random() * particleCanvas.height;
-    this.size = Math.random() * 3 + 1;
-    this.speedX = Math.random() * 0.5 - 0.25;
-    this.speedY = Math.random() * 0.5 - 0.25;
-    this.opacity = Math.random() * 0.5 + 0.3;
-  }
-
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    if (this.size > 0.2) this.size -= 0.01;
-    if (this.x < 0 || this.x > particleCanvas.width) this.speedX *= -1;
-    if (this.y < 0 || this.y > particleCanvas.height) this.speedY *= -1;
-  }
-
-  draw() {
-    particleCtx.fillStyle = `rgba(255, 182, 193, ${this.opacity})`;
-    particleCtx.beginPath();
-    particleCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    particleCtx.fill();
-  }
-}
-
-function handleParticles() {
-  for (let i = 0; i < particles.length; i++) {
-    particles[i].update();
-    particles[i].draw();
-    if (particles[i].size <= 0.2) {
-      particles.splice(i, 1);
-      i--;
-    }
-  }
-}
-
-function createParticles() {
-  if (particles.length < 100) {
-    particles.push(new Particle());
-  }
-}
-
-function animateParticles() {
-  particleCtx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
-  createParticles();
-  handleParticles();
-  requestAnimationFrame(animateParticles);
-}
-
-animateParticles();
-
-window.addEventListener("resize", () => {
-  particleCanvas.width = window.innerWidth;
-  particleCanvas.height = window.innerHeight;
-});
 
 // Seer's Orb Animation
 const style = document.createElement("style");
